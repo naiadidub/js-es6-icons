@@ -129,24 +129,29 @@ function creaCard (){
 		container.append(row)
 	}
 }
-creaCard()
+
 
 let select = document.getElementById('level');
-let scelta = select.options[select.selectedIndex].value;
+let scelta = select.options[select.selectedIndex].value.addEventListener("change", creacarte);
 console.log(scelta)
+function creacarte(){
 switch(scelta) {
 	case 'animal':
 	  // code block
-	  scelta == 'animal'
+	  let tipo = elenco.filter((type)=>{
+		  creaCard()
+		  return tipo.type === 'animal'
+	  })
 	  break;
 	case 'vegetable':
 	  // code block
-	  scelta == 'vegetable'
+	  
 	  break;
 	case 'user':
 	  // code block
-	  scelta == 'user'
+	  
 	  break;  
 	default:
 	  // code block
   }
+}  
